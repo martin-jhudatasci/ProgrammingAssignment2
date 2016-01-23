@@ -42,7 +42,7 @@ cacheSolve <- function(x, ...) {
   
   # otherwise, calculate 
   m <- x$get()
-  m.inv <- solve(m)
+  m.inv <- solve(m, ...)
   x$set.inverse.value(m.inv)
   return(m.inv)
 }
